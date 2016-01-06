@@ -4,7 +4,8 @@
   "description": "Time stamp API",
   "main": "timestamp.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node timestamp.js"
   },
   "author": "philsco",
   "license": "ISC",

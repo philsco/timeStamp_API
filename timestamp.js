@@ -31,7 +31,6 @@ app.all('/*', function (req, res) {
     var pathname = url.parse(req.url).pathname.substring(1);
     var payload = function () {
         var baseDate = new Date(decodeURI(pathname));
-        console.log(pathname);
         if (baseDate == "Invalid Date") {
             return '{"unix":null,"natural":null}';
         } else {
@@ -51,7 +50,7 @@ app.all('/*', function (req, res) {
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
-  var port = server.address().port;
-
+//  var port = server.address().port;
+  var port = process.env.PORT || 3000;
   console.log('Example app listening at http://%s:%s', host, port);
 });
